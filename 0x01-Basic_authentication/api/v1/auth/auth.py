@@ -40,10 +40,10 @@ class Auth:
     def current_user(self, request=None) -> TypeVar('User'):
         """
         Retrieves the current user from a request.
-        
+
         Args:
             request: The request object, optional.
-    
+
         Returns:
             TypeVar('User'): None
         """
