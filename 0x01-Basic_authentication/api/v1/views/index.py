@@ -22,7 +22,6 @@ def stats() -> str:
     """
     from models.user import User
 
-
     stats = {}
     stats['users'] = User.count()
     return jsonify(stats)
