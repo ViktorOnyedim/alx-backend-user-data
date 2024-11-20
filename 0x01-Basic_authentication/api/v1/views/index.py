@@ -33,6 +33,8 @@ def unauthorized() -> str:
     Return:
       - 401 error using abort - Custom Error Pages
     """
+
+    
     return abort(401)
 
 
