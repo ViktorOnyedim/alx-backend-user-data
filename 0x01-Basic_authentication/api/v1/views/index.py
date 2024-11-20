@@ -27,7 +27,6 @@ def stats() -> str:
     stats['users'] = User.count()
     return jsonify(stats)
 
-
 @app_views.route('/unauthorized', methods=["GET"], strict_slashes=False)
 def unauthorized() -> str:
     """
@@ -35,9 +34,7 @@ def unauthorized() -> str:
     Return:
       - 401 error using abort - Custom Error Pages
     """
-
     return abort(401)
-
 
 @app_views.route('/forbidden', methods=['GET'], strict_slashes=False)
 def forbidden() -> str:
