@@ -10,11 +10,10 @@ class Auth:
     A class to handle authentication operations
     """
 
-
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
         """
         Determines if a given path requires authentication
- 
+
         Args:
             path (str): The path to check
             excluded_paths (List[str]): A list of paths that do not require authentication.
@@ -23,7 +22,6 @@ class Auth:
             bool: False
         """
         return False
-
 
     def authorization_header(self, request=None) -> str:
         """
@@ -35,7 +33,6 @@ class Auth:
             str: None
         """
         return None
-
 
     def current_user(self, request=None) -> TypeVar('User'):
         """
