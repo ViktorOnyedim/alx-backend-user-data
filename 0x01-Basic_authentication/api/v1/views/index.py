@@ -32,5 +32,13 @@ def unauthorized() -> str:
     Return:
       - 401 error using abort - Custom Error Pages
     """
-    # Change the below later
-    return jsonify({"error": "Unauthorized"})
+    return abort(401)
+
+@app_views.route('/forbidden', methods=['GET'], strict_slashes=False)
+def forbidden() -> str:
+    """
+    GET /api/v1/forbidden
+    Return:
+      - 403 error using abort - Custom Error Pages
+    """
+    return abort(403)
