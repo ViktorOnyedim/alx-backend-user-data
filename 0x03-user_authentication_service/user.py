@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """ Models Module
 """
-from flask import request
 from sqlalchemy import String
 from sqlalchemy.orm import Mapped, mapped_column, DeclarativeBase
 
 class Base(DeclarativeBase):
+    """Base Class"""
     pass
 
 class User(Base):
