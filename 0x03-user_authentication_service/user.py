@@ -12,7 +12,7 @@ class User(Base):
     """User model class"""
     __tablename__ = "users"
     id: Mapped[int] = mapped_column(primary_key=True)
-    email: Mapped[str] = mapped_column(String(30), nullable=False)
-    hashed_password: Mapped[str] = mapped_column(nullable=False)
-    session_id: Mapped[str] = mapped_column(nullable=True)
-    reset_token: Mapped[str] = mapped_column(nullable=True)
+    email: Mapped[str] = mapped_column(String(250), nullable=False)
+    hashed_password: Mapped[str] = mapped_column(String(250), nullable=False)
+    session_id: Mapped[str] = mapped_column(String(250))
+    reset_token: Mapped[str] = mapped_column(String(250))
